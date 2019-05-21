@@ -1,29 +1,28 @@
 <?php
-include("config.php");
 
-if(isset($_POST['input'])) {
+include("config.php");
+//cek apakah tombol daftar sudah diklik atau belum?
+if(isset($_POST['daftar'])){
 	//ambil data dari formulir
-	$nama = $_POST['nama'];
-	//$nim = $_POST['nim'];
-	$email = $_POST['email'];
-	//$no_telp = $_POST['no_telp'];
-	$tgl_gabung = $_POST['tgl_gabung'];
 	$username = $_POST['username'];
 	$password = $_POST['password'];
+	$email = $_POST['email'];
+	$nama = $_POST['nama'];
+	$tgl_gabung = $_POST['tanggal_gabung'];
 	$status = $_POST['status'];
-	
+	$telepon = $_POST['telepon'];
 	//buat query
-	$sql = "INSERT INTO member(nama, email, username, tgl_gabung, password, status) VALUE ('$nama', '$email', '$username', '$password', '$tgl_gabung', '$status');";
+	$sql = "INSERT INTO member (username, password, email, nama, tanggal_gabung, status, telepon) VALUE ('$username', '$password', '$email', '$nama', '$tgl_gabung', '$status', '$telepon')";
 	$query = mysqli_query($db, $sql);
-	//apakah query simpan berhasil?
-	if ($query) {
-		//kalau berhasi alihkan ke halaman index.php dengan status=sukses
+	//apakah query simpan berhasil
+	if( $query ) {
+		//kalau berhasil alihkan ke halaman index.php dengan status+sukses
 		header('Location: index.php?status=sukses');
 	} else {
 		//kalau gagal alihkan ke halaman index.php dengan status=gagal
 		header('Location: index.php?status=gagal');
 	}
-}else {
-	die("Akses dilarang. . .");
+} else {
+	die("Akses dilarang...");
 }
 ?>

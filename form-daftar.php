@@ -1,47 +1,49 @@
-<?php include("config.php"); ?>
-<!DOCTYPE html>
+<!DOCYTE html>
 <html>
 <head>
-	<title>Form Daftar Member Baru</title>
+	<tittle>Sewa Inventaris | Mahasiswa UNNES</tittle>
 </head>
+
 <body>
 	<header>
-		<h3>Data Member Baru</h3>
+		<h3>Formulir Pendaftaran Member</h3>
 	</header>
-
-	 <form action="proses-pendaftaran.php" method="POST">
-
-        <fieldset>
-
-       		 <p>
-				<label for="nama">Nama: </label>
-				<input type="text" name="nama" placeholder="Nama lengkap" />
-			</p>
-			<p>
-				<label for="email">Email: </label>
-				<input type="text" name="email" />
-			</p>
-			<p>
-				<label for="tgl_gabung">Tanggal gabung: </label>
-				<input type="date" name="tgl_gabung" />
-			</p>
-			<p>
-				<label for="username">username: </label>
-				<input type="text" name="username" />
-			</p>
-			<p>
-				<label for="password">password: </label>
-				<input type="password" name="password" />
-			</p>
-			<p>
-				<label for="status">Status: </label>
-				<input type="text" name="status" />
-			</p>
-			<p>
-				<input type="submit" value="Input" name="input" />
-			</p>
-
+	<form action="proses-pendaftaran.php" method="POST">
+		<fieldset>
+		<p>
+			<label for="usename">Username: </label>
+			<input type="vanchar" name="username" placeholder="username" />
+		</p>
+		<p>
+			<label for="password">Password: </label>
+			<input type="vanchar" name="password" placeholder="password" />
+		</p>
+		<p>
+			<label for="email">Email: </label>
+			<input type="vanchar" name="email" placeholder="email" />
+		</p>
+		<p>
+			<label for="nama">Nama: </label>
+			<input type="vanchar" name="nama" placeholder="nama lengkap" />
+		</p>
+		<p>
+			<label for="tanggal_gabung">Tanggal Gabung: </label>
+			<input type="date" name="tanggal_gabung" />
+		</p>
+		<p>
+			<label for="status">Status: </label>
+			<select name="status">
+				<option>Pemilik Barang</option>
+				<option>Peminjam</option>
+			</select>
+		</p>
+		<p>
+			<label for="telepon">Nomor Telepon: </label>
+			<input type="vanchar" name="telpon" placeholder="telepon" />
+		
+			<input type="submit" value="Daftar" name="daftar" />
+		</p>
 		</fieldset>
 	</form>
-</body>
-</html>
+	</body>
+</html>	
