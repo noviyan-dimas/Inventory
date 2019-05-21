@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 13 Mei 2019 pada 19.59
+-- Generation Time: 21 Mei 2019 pada 08.51
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -40,7 +40,6 @@ CREATE TABLE `barang` (
 --
 
 CREATE TABLE `identitas` (
-  `id_identitas` int(10) NOT NULL,
   `id_member` int(10) NOT NULL,
   `telepon` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -130,7 +129,6 @@ ALTER TABLE `barang`
 -- Indexes for table `identitas`
 --
 ALTER TABLE `identitas`
-  ADD PRIMARY KEY (`id_identitas`),
   ADD KEY `id_member` (`id_member`);
 
 --
@@ -176,11 +174,6 @@ ALTER TABLE `staff`
 --
 ALTER TABLE `barang`
   MODIFY `id_barang` int(10) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `identitas`
---
-ALTER TABLE `identitas`
-  MODIFY `id_identitas` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `member`
 --
