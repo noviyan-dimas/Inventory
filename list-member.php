@@ -25,6 +25,7 @@
 			<th>Password</th>
 			<th>Email</th>
 			<th>Nama</th>
+			<th>NIM</th>
 			<th>Tanggal Gabung</th>
 			<th>Status</th>
 			<th>Telepon</th>
@@ -44,6 +45,7 @@
 				echo "<td>".$member['password']."</td>";
 				echo "<td>".$member['email']."</td>";
 				echo "<td>".$member['nama']."</td>";
+				echo "<td>".$member['NIM']."</td>";
 				echo "<td>".$member['tgl_gabung']."</td>";
 				echo "<td>".$member['status']."</td>";
 				echo "<td>".$member['telepon']."</td>";
