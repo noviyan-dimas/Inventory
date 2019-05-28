@@ -8,11 +8,12 @@ if(isset($_POST['daftar'])){
 	$password = $_POST['password'];
 	$email = $_POST['email'];
 	$nama = $_POST['nama'];
+	$NIM = $_POST['NIM'];
 	$tgl_gabung = $_POST['tanggal_gabung'];
 	$status = $_POST['status'];
 	$telepon = $_POST['telepon'];
 	//buat query
-	$sql = "INSERT INTO member (username, password, email, nama, tanggal_gabung, status, telepon) VALUE ('$username', '$password', '$email', '$nama', '$tgl_gabung', '$status', '$telepon')";
+	$sql = "INSERT INTO member (username, password, email, nama, NIM, tanggal_gabung, status, telepon) VALUE ('$username', '$password', '$email', '$nama', '$tgl_gabung', '$status', '$telepon')";
 	$query = mysqli_query($db, $sql);
 	//apakah query simpan berhasil
 	if( $query ) {
