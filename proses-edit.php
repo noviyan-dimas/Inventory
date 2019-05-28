@@ -8,11 +8,12 @@ if(isset($_POST['simpan'])){
 	$password = $_POST['password'];
 	$email = $_POST['email']
 	$nama = $_POST['nama'];
+	$NIM = $_POST['NIM'];
 	$tgl_gabung = $_POST['tanggal_gabung'];
 	$status = $_POST['status'];
 	$telepon = $_POST['telepon'];
 	//buat query update
-	$sql = "UPDATE member SET username='$username', password='$password', email='$email', nama='$nama', tanggal_gabung='$tgl_gabung', status='$status', telepon='$telepon' WHERE id=$id";
+	$sql = "UPDATE member SET username='$username', password='$password', email='$email', nama='$nama', NIM='$NIM', tanggal_gabung='$tgl_gabung', status='$status', telepon='$telepon' WHERE id=$id";
 	$query = mysqli_query($db, $sql);
 	//apakah query update berhasil?
 	if( $query ) {
