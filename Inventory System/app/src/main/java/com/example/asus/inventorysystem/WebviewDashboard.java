@@ -14,15 +14,15 @@ import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 import static java.security.AccessController.getContext;
 
-public class WebviewLogin extends Activity {
+public class WebviewDashboard extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
-        setContentView(R.layout.webview_login);
+        setContentView(R.layout.webview_dashboard);
 
-        WebView webView = (WebView) findViewById(R.id.login);
+        WebView webView = (WebView) findViewById(R.id.web_dashboard);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
