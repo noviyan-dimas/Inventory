@@ -27,6 +27,10 @@
 			<input type="vanchar" name="nama" placeholder="nama lengkap" />
 		</p>
 		<p>
+			<label for="nama">NIM: </label>
+			<input type="vanchar" name="NIM" placeholder="NIM" />
+		</p>
+		<p>
 			<label for="tanggal_gabung">Tanggal Gabung: </label>
 			<input type="date" name="tanggal_gabung" />
 		</p>
