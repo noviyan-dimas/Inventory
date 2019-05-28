@@ -44,6 +44,10 @@ if (mysqli_num_rows($query)<1) {
 			<input type="vanchar" name="nama" placeholder="nama lengkap" value="<?php echo $member['nama'] ?> />
 		</p>
 		<p>
+			<label for="nama">NIM: </label>
+			<input type="vanchar" name="NIM" placeholder="NIM" value="<?php echo $member['NIM'] ?> />
+		</p>
+		<p>
 			<label for="tanggal_gabung">Tanggal Gabung: </label>
 			<input type="date" name="tanggal_gabung" value="<?php echo $member['tanggal_gabung'] ?> />
 		</p>
