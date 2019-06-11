@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 21 Mei 2019 pada 08.51
+-- Generation Time: 11 Jun 2019 pada 14.26
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -60,6 +60,13 @@ CREATE TABLE `member` (
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `member`
+--
+
+INSERT INTO `member` (`id_member`, `username`, `password`, `email`, `nama`, `tgl_gabung`, `status`) VALUES
+(1, 'dheaputri', '1c1d655f0a880b9a577db312cf702e2a', 'dheaputri@gmail.com', 'Dhea Putri', '2019-06-11', 'mahasiswa');
+
 -- --------------------------------------------------------
 
 --
@@ -71,7 +78,8 @@ CREATE TABLE `orderbarang` (
   `id_member` int(10) NOT NULL,
   `time_order` date NOT NULL,
   `id_barang` int(10) NOT NULL,
-  `time_back` date NOT NULL
+  `time_back` date NOT NULL,
+  `orderbarang_status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -114,6 +122,13 @@ CREATE TABLE `staff` (
   `nama` varchar(255) NOT NULL,
   `hak_akses` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `staff`
+--
+
+INSERT INTO `staff` (`id_staff`, `username`, `password`, `email`, `nama`, `hak_akses`) VALUES
+(1, 'admin', '0192023a7bbd73250516f069df18b500', 'faragustine@gmail.com', 'Fara Agustine Putri Pratiwi', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -178,7 +193,7 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_member` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `orderbarang`
 --
@@ -198,7 +213,7 @@ ALTER TABLE `pengembalian`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_staff` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
