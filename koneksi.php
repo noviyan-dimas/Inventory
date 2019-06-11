@@ -5,6 +5,7 @@
 	$password 		= 	"";
 	$database_name 	= 	"admin_guest";
 
+
 	$con = mysqli_connect($server, $user, $password, $database_name);
 
 	if (!$con){
