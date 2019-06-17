@@ -1,6 +1,7 @@
 package com.example.asus.inventorysystem;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
@@ -26,6 +29,24 @@ public class WebviewHome extends Activity {
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
+
+        FloatingActionButton button1 = (FloatingActionButton) findViewById(R.id.dashboard);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i  = new Intent(WebviewHome.this, WebviewDashboard.class);
+                startActivity(i);
+            }
+        });
+
+        FloatingActionButton button2 = (FloatingActionButton) findViewById(R.id.Upload);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(WebviewHome.this, WebviewUpload.class);
+                startActivity(i);
+            }
+        });
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 

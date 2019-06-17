@@ -21,11 +21,19 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, WebviewLogin.class);
+                Intent i = new Intent(MainActivity.this, WebviewHome.class);
                 startActivity(i);
             }
         });
 
+        Button button = (Button) findViewById(R.id.register);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, WebviewHome.class);
+                startActivity(i);
+            }
+        });
     }
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {

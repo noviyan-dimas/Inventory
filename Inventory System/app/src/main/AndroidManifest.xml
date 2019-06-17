@@ -25,6 +25,12 @@
         </activity>
         <activity android:name=".WebviewLogin">
         </activity>
+        <activity android:name=".WebviewHome">
+        </activity>
+        <activity android:name=".WebviewDashboard">
+        </activity>
+        <activity android:name=".WebviewUpload">
+        </activity>
     </application>
 
 </manifest>
