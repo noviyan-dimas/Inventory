@@ -37,7 +37,7 @@ public class WebviewLogin extends Activity {
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.setWebViewClient(new WebViewClient());
         // link webview
-        webView.loadUrl("https://www.google.com");
+        webView.loadUrl("kuliah.ilkom.ac.id");
 
 
 
